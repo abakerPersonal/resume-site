@@ -1,0 +1,30 @@
+{
+  "name": "resume-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npm run build; node dist/server.js",
+    "build": "rm -r dist && npx tsc && cp -r src/public dist/public",
+    "dev": "nodemon src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.3",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0",
+    "ts-jest": "^29.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}

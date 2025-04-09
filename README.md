@@ -1,1 +1,1 @@
-# resume-site
+ docker build -t resume-site .
