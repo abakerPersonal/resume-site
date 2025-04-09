@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "start": "npm run build; node dist/server.js",
-    "build": "rm -r dist && npx tsc && cp -r src/public dist/public",
+    "build": "[ -d dist ] && rm -r dist; npx tsc && cp -r src/public dist/public",
+    "build-docker": "npm run build && docker build -t resume-site .",
     "dev": "nodemon src/server.ts"
   },
   "keywords": [],
