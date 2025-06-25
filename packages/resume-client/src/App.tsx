@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Resume from './components/resume';
+import { Resume } from '@abakernet/types';
+import HeaderComponent from './components/header';
 
 function App() {
+  const [resume, setResume] = useState<Resume | null>(null);
+
+  useEffect(() => {
+    fetch('http://localhost:9000/api/v1/resume')
+      .then(res => res.json())
+      .then(data => setResume(data));
+  }, []);
+
+  if (!resume) return <div>Loading...</div>;
+
   return (
-     <Resume />
+  <div>
+    <div className="container">
+
+      <button className="toggle-button"> 
+        <i id="theme-icon" className="fas fa-moon"></i>
+      </button>
+
+
+      <HeaderComponent headerInfo={resume.header} />
+
+    </div>
+
+    <div className="footer">
+      <p>&copy; 2025 Alan Baker | All Rights Reserved</p>
+    </div>
+  </div>
   );
 }
 

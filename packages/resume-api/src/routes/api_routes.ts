@@ -8,11 +8,11 @@ const apiRouter = express.Router()
 apiRouter.get('/resume', (req, res) => {
     const resume: Resume = {
         header: {
-            name: '',
-            title: '',
-            email: '',
-            linkedInUrl: '',
-            location: ''
+            name: 'Alan Baker',
+            title: 'Senior Software Engineer',
+            email: 'alan@abaker.net',
+            linkedInUrl: 'linkedin.com/in/alanmbaker',
+            location: 'USA'
         },
         summary: SUMMARY,
         skills: [],
