@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Resume } from '@abakernet/types';
 import HeaderComponent from './components/header';
+import SummaryComponent from './components/summary';
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
@@ -25,6 +26,7 @@ function App() {
 
 
       <HeaderComponent headerInfo={resume.header} />
+      <SummaryComponent summary={resume.summary} />
 
     </div>
 
