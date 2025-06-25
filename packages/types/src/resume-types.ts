@@ -15,14 +15,16 @@ export type Experience = {
     company: string, 
     title: string, 
     location: string,
+    remote: boolean,
+    logo: string,
     startDate: string,
     endDate?: string,
-    description: ExperienceSection[]
+    sections: ExperienceSection[]
 }
 
 export type ExperienceSection = {
-    summary: string,
-    items: string[] 
+    category: string,
+    bullets: string[] 
 }
 
 export type Education = {
