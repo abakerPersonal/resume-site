@@ -211,6 +211,7 @@
   
   .static-download button {
     background-color: var(--accent);
+    width: -webkit-fill-available;
     color: white;
     border: none;
     padding: 10px 16px;

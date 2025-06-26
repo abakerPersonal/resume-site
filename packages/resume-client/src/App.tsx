@@ -3,6 +3,8 @@ import './App.css';
 import { Resume } from '@abakernet/types'
 import HeaderComponent from './components/header';
 import SummaryComponent from './components/summary';
+import DownloadButton from './components/download-button';
+import SkillsComponent from './components/skills';
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
@@ -23,10 +25,16 @@ function App() {
         <i id="theme-icon" className="fas fa-moon"></i>
       </button>
 
-
       <HeaderComponent headerInfo={resume.header} />
-      <SummaryComponent summary={resume.summary} />
 
+      <div className="static-download">
+        <DownloadButton fileName='Alan_Baker_Resume.pdf' fileUrl="/files/Alan_Baker_Resume.pdf" buttonText='Download PDF'/>
+        <DownloadButton fileName='Alan_Baker_Resume.docx' fileUrl="/files/Alan_Baker_Resume.docx" buttonText='Download DOCX'/>
+      </div>
+
+      <SummaryComponent summary={resume.summary} />
+      <SkillsComponent skills={resume.skills} />
+    
     </div>
 
     <div className="footer">
