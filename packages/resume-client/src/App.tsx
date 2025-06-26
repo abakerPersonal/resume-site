@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Resume } from '@abakernet/types';
+import { Resume } from '@abakernet/types'
 import HeaderComponent from './components/header';
 import SummaryComponent from './components/summary';
 

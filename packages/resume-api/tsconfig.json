@@ -9,6 +9,6 @@
       "types": ["node", "jest"],
       "jsx": "preserve"
     },
-    "include": ["src", "../packages/types/resume-types.ts"],
+    "include": ["src"],
     "exclude": ["resume-api/node_modules"]
   }
