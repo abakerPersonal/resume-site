@@ -1,6 +1,5 @@
 import { Experience } from "@abakernet/types";
-
-export const SonosExperience: Experience = {
+const SonosExperience: Experience = {
   "company": "SONOS",
   "location": "Goleta, CA",
   "logo": "images/logos/sonos.png",
@@ -41,3 +40,5 @@ export const SonosExperience: Experience = {
     }
   ]
 }
+
+export const allExperience = [SonosExperience]

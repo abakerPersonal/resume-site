@@ -5,6 +5,9 @@ import HeaderComponent from './components/header';
 import SummaryComponent from './components/summary';
 import DownloadButton from './components/download-button';
 import SkillsComponent from './components/skills';
+import ExperienceSectionComponent from './components/experience-section';
+import ExperienceComponent from './components/experience';
+import AllExperienceComponent from './components/all-experience';
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
@@ -34,6 +37,7 @@ function App() {
 
       <SummaryComponent summary={resume.summary} />
       <SkillsComponent skills={resume.skills} />
+      <AllExperienceComponent allExperience={resume.experience} />
     
     </div>
 

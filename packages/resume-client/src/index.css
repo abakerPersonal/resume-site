@@ -79,14 +79,11 @@
     margin-bottom: 10px;
     font-size: 1.0rem;
   }
-
-  details {
-    margin-top: 10px;
-  }
-
-  summary {
-    font-weight: 600;
-    font-size: 1.1rem;
+  
+  .section-expand {
+    appearance: auto;
+    border-width: 0;
+    margin: 2px;
   }
 
   .contact-info a {
