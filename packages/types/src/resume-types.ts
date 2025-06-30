@@ -37,5 +37,12 @@ export type Resume = {
     summary: string,
     skills: Skill[]
     experience: ExperienceItem[],
-    education: EducationItem[]
+    education: EducationItem[],
+}
+
+export type FileType = 'PDF' | 'DOCX'
+
+export type DownloadLink = {
+    type: FileType,
+    url: string,
 }

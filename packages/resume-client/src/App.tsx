@@ -7,6 +7,10 @@ import DownloadButton from './components/download-button';
 import SkillsComponent from './components/skills';
 import EducationComponent from './components/education';
 import ExperienceComponent from './components/experience';
+import Downloads from './components/downloads';
+
+const PDF_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1p-zRkH-TMBeVvdhxLKivZ9ZF6r0DPv4v'
+const DOCX_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1ER7Zt94-ZP7eW5sP1NN7YqaFKwE3B6zt'
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
@@ -28,7 +32,7 @@ function App() {
   return (
   <div>
     <div className="container">
-
+      
       <button 
         className="toggle-button"
         onClick={() => setDarkMode(mode => !mode)}
@@ -41,12 +45,7 @@ function App() {
       </button>
 
       <HeaderComponent headerInfo={resume.header} />
-
-      <div className="static-download">
-        <DownloadButton fileName='Alan_Baker_Resume.pdf' fileUrl="/files/Alan_Baker_Resume.pdf" buttonText='Download PDF'/>
-        <DownloadButton fileName='Alan_Baker_Resume.docx' fileUrl="/files/Alan_Baker_Resume.docx" buttonText='Download DOCX'/>
-      </div>
-
+      <Downloads />
       <SummaryComponent summary={resume.summary} />
       <SkillsComponent skills={resume.skills} />
       <ExperienceComponent experience={resume.experience} />
