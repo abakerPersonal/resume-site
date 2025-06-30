@@ -13,4 +13,8 @@ apiRouter.get('/resume/downloads', (req, res) => {
     res.send(downloads)
 })
 
+apiRouter.get('/status', (req, res) => {
+    res.sendStatus(200)
+})
+
 export default apiRouter

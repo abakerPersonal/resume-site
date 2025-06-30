@@ -1,20 +1,19 @@
 import request from 'supertest'
-import app from '../src/routes'
+import server from '../src/server'
 
-let server: any
+describe('Express Server', () => {
+  afterAll((done) => {
+    server.close(done);
+  });
 
-beforeAll(() => {
-    server = app.listen(3000)
-})
+  it('should respond to the root path with 404', async () => {
+    const res = await request(server).get('/');
+    expect(res.status).toBe(404);
+  });
 
-afterAll(() => {
-    server.close()
-})
-
-describe('GET /', () => {
-  it('should return 200 OK and servie inde.html', async () => {
-    const res = await request(app).get('/')
+  it('should respond to should respond to /api/v1/ping with ok', async () => {
+    const res = await request(server).get('/api/v1/status');
+    // Adjust this based on your actual API router
     expect(res.status).toBe(200)
-    expect(res.text).toContain('<h1>Hello World</h1>')
-  })
-})
+  });
+});

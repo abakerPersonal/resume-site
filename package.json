@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
     "start": "concurrently \"npm --workspace packages/resume-api start\" \"npm --workspace packages/resume-client start\""
 
   }
