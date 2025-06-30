@@ -10,7 +10,7 @@ const SkillsComponent: React.FC<SkillsProps> = ({skills}) => (
         <h2>Technical Skills</h2>
         <ul>
             { skills.map(skill => (
-                <li><strong>{skill.title}:</strong>{skill.skills.join(', ')}</li>
+                <li><strong>{skill.title}: </strong>{skill.skills.join(', ')}</li>
             ))}
         </ul>
     </div>

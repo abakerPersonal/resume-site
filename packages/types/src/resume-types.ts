@@ -11,7 +11,7 @@ export type Skill = {
     skills: string[]
 }
 
-export type Experience = {
+export type ExperienceItem = {
     company: string, 
     title: string, 
     location: string,
@@ -19,15 +19,15 @@ export type Experience = {
     logo: string,
     startDate: string,
     endDate?: string,
-    sections: ExperienceSection[]
+    sections: ExperienceItemBulletSection[]
 }
 
-export type ExperienceSection = {
+export type ExperienceItemBulletSection = {
     category: string,
     bullets: string[] 
 }
 
-export type Education = {
+export type EducationItem = {
     school: string, 
     degree: string[],
 }
@@ -36,6 +36,6 @@ export type Resume = {
     header: Header,
     summary: string,
     skills: Skill[]
-    experience: Experience[],
-    education: Education[]
+    experience: ExperienceItem[],
+    education: EducationItem[]
 }

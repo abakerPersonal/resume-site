@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build: ./packages/resume-api
+    ports:
+      - "9000:9000"
+    environment:
+      - NODE_ENV=production
+
+  client:
+    build: ./packages/resume-client
+    ports:
+      - "3000:80"

@@ -5,12 +5,12 @@ import HeaderComponent from './components/header';
 import SummaryComponent from './components/summary';
 import DownloadButton from './components/download-button';
 import SkillsComponent from './components/skills';
-import ExperienceSectionComponent from './components/experience-section';
+import EducationComponent from './components/education';
 import ExperienceComponent from './components/experience';
-import AllExperienceComponent from './components/all-experience';
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:9000/api/v1/resume')
@@ -18,14 +18,26 @@ function App() {
       .then(data => setResume(data));
   }, []);
 
+  // Update body class when darkMode changes
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
+
   if (!resume) return <div>Loading...</div>;
 
   return (
   <div>
     <div className="container">
 
-      <button className="toggle-button"> 
-        <i id="theme-icon" className="fas fa-moon"></i>
+      <button 
+        className="toggle-button"
+        onClick={() => setDarkMode(mode => !mode)}
+        aria-label="Toggle dark mode"
+      > 
+        <i 
+          id="theme-icon" 
+          className={darkMode ? 'fas fa-sun' : 'fas fa-moon'}
+        ></i>
       </button>
 
       <HeaderComponent headerInfo={resume.header} />
@@ -37,7 +49,8 @@ function App() {
 
       <SummaryComponent summary={resume.summary} />
       <SkillsComponent skills={resume.skills} />
-      <AllExperienceComponent allExperience={resume.experience} />
+      <ExperienceComponent experience={resume.experience} />
+      <EducationComponent education={resume.education } />
     
     </div>
 

@@ -1,13 +1,13 @@
-import { Education } from "@abakernet/types"
+import { EducationItem } from "@abakernet/types"
 
-const ucsb: Education = {
+const ucsb: EducationItem = {
     school: 'University of California, Santa Barbara',
     degree: [
         'Bachelor of Science in Computer Science (High Honors)'
     ]
 }
 
-const ahc: Education = {
+const ahc: EducationItem = {
     school: 'Allan Hancock College',
     degree: [
         'Associate of Arts in Mathematics (Computer Science & Physics Emphasis)',
@@ -15,4 +15,4 @@ const ahc: Education = {
     ]
 }
 
-export const allEducation = [ucsb, ahc]
+export const education = [ucsb, ahc]
