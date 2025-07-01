@@ -1,4 +1,4 @@
-import { ExperienceItem, ExperienceItemBulletSection } from '@abakernet/types';
+import { ExperienceItem } from '@abakernet/types';
 import React, { useState } from 'react';
 import ExperienceSectionComponent from './experience-item-bullet-section';
 
@@ -11,7 +11,12 @@ const ExperienceItemComponent: React.FC<ExperienceProps> = ({ experienceItem }) 
 
     return (
         <section className='section'>
-            <h3><img src={experienceItem.logo} /> {experienceItem.company}, {experienceItem.location}</h3>
+            <h3>
+                <img 
+                    src={experienceItem.logo} 
+                    alt={`${experienceItem.company} logo`}/> 
+                {experienceItem.company}, {experienceItem.location}
+            </h3>
             <div>
                 <button
                     onClick={() => setOpen(!open)}

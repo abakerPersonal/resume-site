@@ -13,7 +13,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({ headerInfo }) => (
         </div>
         <div className="header-right">
             <p><i className="fas fa-envelope"></i> <a href={`mailto:${headerInfo.email}`}>{headerInfo.email}</a></p>
-            <p><i className="fab fa-linkedin"></i> <a href={`https://www.${headerInfo.linkedInUrl}`} target="_blank">{headerInfo.linkedInUrl}</a></p>
+            <p><i className="fab fa-linkedin"></i> <a href={`https://www.${headerInfo.linkedInUrl}`} target="_blank" rel="noreferrer">{headerInfo.linkedInUrl}</a></p>
             <p><i className="fas fa-map-marker-alt"></i> {headerInfo.location}</p>
           </div>
     </header>

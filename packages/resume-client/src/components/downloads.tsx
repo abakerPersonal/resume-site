@@ -15,8 +15,8 @@ const Downloads: React.FC = () => {
 
       return (
         <div className="static-download">
-            {dowloads?.map(download =>
-                <DownloadButton fileUrl={download.url} buttonText={`Download ${download.type}`}/>
+            {dowloads?.map((download, idx) =>
+                <DownloadButton key={idx} fileUrl={download.url} buttonText={`Download ${download.type}`}/>
             )}
         </div>
     )
