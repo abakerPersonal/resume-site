@@ -9,13 +9,16 @@ import ExperienceComponent from './components/experience';
 import Downloads from './components/downloads';
 import FooterComponent from './components/footer';
 import DarkModeToggleButton from './components/dark-mode-toggle';
+import { BASEURL } from './constants';
+
+
 
 function App() {
   const [resume, setResume] = useState<Resume | null>(null);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:9000/api/v1/resume')
+    fetch(`${BASEURL}/resume`)
       .then(res => res.json())
       .then(data => setResume(data));
   }, []);

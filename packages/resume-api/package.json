@@ -10,7 +10,7 @@
     "dev": "nodemon src/server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alan Baker",
   "license": "ISC",
   "description": "",
   "dependencies": {
