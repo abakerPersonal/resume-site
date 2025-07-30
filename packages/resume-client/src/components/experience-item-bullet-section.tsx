@@ -9,8 +9,8 @@ const ExperienceSectionComponent: React.FC<ExperienceSectionProps> = ({ section 
     <div>
         <h4>{section.category}</h4>
             <ul>
-                {section.bullets.map(bullet =>
-                    <li>{bullet}</li>
+                {section.bullets.map((bullet, idx) =>
+                    <li key={idx}>{bullet}</li>
                 )}
             </ul>
     </div>

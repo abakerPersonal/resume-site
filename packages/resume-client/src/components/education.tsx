@@ -8,8 +8,8 @@ type EducationProps = {
 const EducationComponent: React.FC<EducationProps> = ({education}) => (
     <div>
         <h2>Education</h2>
-        { education.map(item => (
-            <p><strong>{item.school}:</strong> {item.degree.join(', ')}</p>
+        { education.map((item, idx) => (
+            <p key={idx}><strong>{item.school}:</strong> {item.degree.join(', ')}</p>
         ))}
     </div>
 );

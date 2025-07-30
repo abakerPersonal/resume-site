@@ -19,10 +19,10 @@ afterEach(() => {
 });
 
 test('renders download buttons after fetching', async () => {
-  render(<Downloads />);
-  // Wait for the buttons to appear
-  await waitFor(() => {
-    expect(screen.getByRole('button', { name: /download pdf/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /download docx/i })).toBeInTheDocument();
+    render(<Downloads />);
+    // Wait for the buttons to appear
+    await waitFor(() => {
+        expect(screen.getByRole('button', { name: /download pdf/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /download docx/i })).toBeInTheDocument();
   });
 });
