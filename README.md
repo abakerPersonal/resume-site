@@ -1,4 +1,4 @@
-A modern responsive resum website built using React Types Scripte, service by a Node.js API
+A modern responsive resume website built using React and TypesScript, service by a Node.js API
 
 ## Features
 - Dark/Ligh mode toggle
