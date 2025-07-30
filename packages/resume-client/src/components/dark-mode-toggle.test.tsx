@@ -6,8 +6,8 @@ test('renders the toggle button with correct icon and calls onToggle', () => {
 
     // Test when darkMode is false (should show moon icon)
     const { rerender } = render(<DarkModeToggleButton darkMode={false} onToggle={onToggle} />);
-   expect(screen.getByRole('button', { name: /toggle dark mode/i })).toBeInTheDocument();
-   expect(screen.getByTestId('theme-icon')).toHaveClass('fa-moon');
+    expect(screen.getByRole('button', { name: /toggle dark mode/i })).toBeInTheDocument();
+    expect(screen.getByTestId('theme-icon')).toHaveClass('fa-moon');
 
     // Click the button
     fireEvent.click(screen.getByRole('button', { name: /toggle dark mode/i }));
