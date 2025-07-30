@@ -1,3 +1,1 @@
-const PORT = 9090
-
-export const BASEURL = `http://localhost:${PORT}/api/v1`
+export const BASEURL = `https://resume-api.abaker.net/api/v1`

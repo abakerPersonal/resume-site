@@ -20,7 +20,8 @@ function App() {
   useEffect(() => {
     fetch(`${BASEURL}/resume`)
       .then(res => res.json())
-      .then(data => setResume(data));
+      .then(data => setResume(data))
+      .catch(reason => console.log(reason))
   }, []);
 
   // Update body class when darkMode changes
