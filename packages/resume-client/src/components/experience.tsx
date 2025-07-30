@@ -11,8 +11,6 @@ const ExperienceComponent: React.FC<ExperienceProps> = ({experience}) => (
         <h2>Professional Experience</h2>   
         {experience.map((experienceItem, idx) =>
             <ExperienceItemComponent key={idx} experienceItem={experienceItem} />
-        {experience.map(experienceItem =>
-            <ExperienceItemComponent experienceItem={experienceItem} />
         )} 
     </div>
 );
