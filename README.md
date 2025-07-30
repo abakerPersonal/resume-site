@@ -5,6 +5,5 @@
 2) npm run build <br>
 </code>
  
- 
- 
- docker build -t resume-site .
+# To Build and Run Containters
+docker compose up --build

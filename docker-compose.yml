@@ -1,0 +1,16 @@
+services:
+  api:
+    build: 
+      context: .
+      dockerfile:  packages/resume-api/Dockerfile
+    ports:
+      - "9000:9000"
+    environment:
+      - NODE_ENV=production
+
+  client:
+    build: 
+      context: .
+      dockerfile: ./packages/resume-client/Dockerfile
+    ports:
+      - "3000:80"

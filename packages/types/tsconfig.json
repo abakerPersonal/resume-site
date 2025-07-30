@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "Node",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "jsx": "preserve"
+    },
+    "include": ["src"],
+}
