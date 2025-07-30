@@ -5,9 +5,19 @@ type SummaryProp = {
 }
 
 const SummaryComponent: React.FC<SummaryProp> = ({summary}) => (
-    <div>
-        <h2>Professional Summary</h2>
-        <p>{summary}</p>
+     <div>
+        { summary ? 
+        (
+            <div>
+                <h2>Professional Summary</h2>
+                <p>{summary}</p>
+            </div>
+        ) :
+        (
+            <p />
+        )
+
+        }
     </div>
 );
 
